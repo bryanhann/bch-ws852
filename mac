@@ -1,0 +1,2 @@
+export WS852_DEVICE_ROOT=/Volumes/WS-852
+./ws852 $*

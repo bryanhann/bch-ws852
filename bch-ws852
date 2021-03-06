@@ -13,12 +13,13 @@ class Resource:
         self._val = os.environ.get(self._key)
         self._path = self._val and pathlib.Path(self._val)
     def check(self):
+        print( "${%s} is [%s]" % (self._key, self._val) )
         if not self._val:
             return print('${%s}: not defined' % self._key )
         elif not self._path:
             return print('${%s}: not a path' % self._key )
         elif not self._path.is_dir():
-            return print('${%s}: not a directory' % self._key )
+            return print('${%s} is not a directory' % self._key )
         else:
             return True
     def path(self):

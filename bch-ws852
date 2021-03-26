@@ -1,4 +1,6 @@
-_export () { export $1=$2; }
-_export WS852_UPLOAD_DIR  $(mydts dirs -t MYENV_WS852_UPLOAD_DIR  2>/dev/null | borg-uniq -t 2>/dev/null)
-_export WS852_DEVICE_ROOT $(mydts dirs -t MYENV_WS852_DEVICE_ROOT 2>/dev/null | borg-uniq -t 2>/dev/null)
+#!/bin/sh
+
+export WS852_UPLOAD_DIR=$(  myenv -r WS852_UPLOAD_DIR  )
+export WS852_DEVICE_ROOT=$( myenv -r WS852_DEVICE_ROOT )
+
 $(dirname $0)/bin/bch-ws852 $*

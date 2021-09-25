@@ -1,1 +1,6 @@
+#!/source/this/sh
+borg.insitu.assert
+
 export PATH=${PATH}:$(dirname ${PWD})
+export BCH_APP_WS852=$(borg.insitu.path) 
+__lbin_load $(borg.insitu.path)/lbin

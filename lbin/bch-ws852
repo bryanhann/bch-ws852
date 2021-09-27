@@ -1,5 +1,4 @@
 #!/bin/sh
-. bch.mnt.source.sh
 eval $(bch.mnt.scan)
 export WS852_UPLOAD_DIR=${DEVICE_BCH16_VJOT_DST}
 export WS852_DEVICE_ROOT=${DEVICE_WS852__ROOT__}

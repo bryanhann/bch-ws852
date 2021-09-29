@@ -1,5 +1,5 @@
 #!/source/this/sh
-borg.insitu.assert
+borg.assert.insitu
 __lbin_default
 cd ..
 export BCH_APP_WS852=${PWD}

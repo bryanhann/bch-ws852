@@ -1,5 +1,8 @@
 #!/bin/sh
 eval $(bch.mnt.scan)
-export WS852_UPLOAD_DIR=${DEVICE_BCH16_VJOT_DST}
-export WS852_DEVICE_ROOT=${DEVICE_WS852__ROOT__}
+export_ () { export $1=$2 ; }
+export_ WS852_DST           ${DEVICE_PUMPKIN_WS852_DST}
+export_ WS852_UPLOAD_DIR    ${DEVICE_PUMPKIN_WS852_DST}
+export_ WS852_DEVICE_ROOT   ${DEVICE_Olympus_WS852_ROOT}
+
 ${BCH_APP_WS852}/scripts/ws852.py $*

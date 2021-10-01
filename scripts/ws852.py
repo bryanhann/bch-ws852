@@ -41,7 +41,7 @@ def cmd_rename():
         mtime = os.path.getmtime(str(path))
         stamp = datetime.datetime.fromtimestamp(mtime).strftime('%Y%m%dT%H%M%S')
         serial = path.name.split('.')[0].split('_')[1]
-        newname = '%s.{serial-%s}.ws852.mp3' % (stamp, serial)
+        newname = '%s.[serial-%s].ws852.mp3' % (stamp, serial)
         newpath = path.parent/newname
         print('rename: %s -> %s' % (path,newpath))
         path.rename(newpath)
